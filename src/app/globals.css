@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Helvetica Now Display";
+  src: url("../../public/fonts/HelveticaNowDisplay-Regular.eot");
+  src: local("../../public/fonts/Helvetica Now Display Regular"),
+    local("../../public/fonts/HelveticaNowDisplay-Regular"),
+    url("../../public/fonts/HelveticaNowDisplay-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../../public/fonts/HelveticaNowDisplay-Regular.woff2") format("woff2"),
+    url("../../public/fonts/HelveticaNowDisplay-Regular.woff") format("woff"),
+    url("../../public/fonts/HelveticaNowDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: white;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: black;
+  background: var(--background);
+  font-family: "Helvetica Now Display";
+}
+
+.container-fluid {
+  @apply max-w-[1190px] mx-auto px-5 lg:px-0 relative;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
