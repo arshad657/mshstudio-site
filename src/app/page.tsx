@@ -15,6 +15,8 @@ import Head from "next/head";
 import BlogCard from "@/components/BlogCard";
 import { BiPlus } from "react-icons/bi";
 import FAQ from "@/components/FAQ/FAQ";
+import ClientFeedback from "@/components/ClientFeedback/ClientFeedback";
+import Footer from "@/components/Footer/Footer";
 
 const showCaseData = [
   { title: "United health SAAS - UIUX Design", image: showcase1 },
@@ -51,7 +53,7 @@ export default function Home() {
     };
   }, []);
   return (
-    <section className="space-y-10 pt-20 w-full mb-20">
+    <section className="space-y-10 pt-20 w-full">
       <div className="relative container-fluid h-[623px] md:h-[523px] w-full bg-[url('../../public/images/hero-bg.png')] bg-cover bg-center flex flex-col justify-center gap-10 text-white rounded-3xl">
         <h2 className="text-4xl lg:text-6xl text-center">
           Designing tomorrow’s digital <br /> interfaces today. powerful digital{" "}
@@ -765,6 +767,12 @@ export default function Home() {
 
       {/* FAQ */}
       <FAQ />
+
+      {/* Client Feedback */}
+      <ClientFeedback />
+
+      {/* Footer */}
+      <Footer />
     </section>
   );
 }

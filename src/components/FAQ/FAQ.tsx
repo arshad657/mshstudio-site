@@ -41,7 +41,7 @@ function FAQ() {
   };
 
   return (
-    <section className="mb-20 py-10">
+    <section>
       <div className="container-fluid">
         <div className="flex items-center gap-2">
           <svg
@@ -79,7 +79,7 @@ function FAQ() {
           </svg>
           <p className="text-5xl font-light">Frequently Asked Questions</p>
         </div>
-        <div className="mt-8 divide-y-2">
+        <div className="divide-y-2">
           {faqData?.map((item: any) => (
             <div
               key={item.id}
