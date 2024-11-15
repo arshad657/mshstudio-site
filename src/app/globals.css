@@ -34,7 +34,7 @@ body {
 }
 
 .container-fluid {
-  @apply max-w-[1190px] mx-auto px-5 lg:px-0 relative;
+  @apply max-w-[1190px] mx-10 lg:mx-auto lg:px-0 relative;
 }
 
 @layer utilities {

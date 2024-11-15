@@ -24,8 +24,22 @@ const showCaseData = [
   { title: "MyEco- Branding & UIUX Design", image: showcase3 },
 ];
 const blogData = [
-  { title: "14 UI Design Trends in 2024 That Will Dominate: Stay Ahead of the Game", description: "The landscape of user interface design is undoubtedly one of the most rapidly evolving industries. With each passing day, fresh ..", image: blog1,  tag: "UI DESIGN" },
-  { title: "11 Effective Interaction Design Principles for Seamless Digital Interactions", description: "What does the term 'interaction' truly mean to you? Isn't it about the communication and understanding shared between two individuals?..", image: blog2,  tag: "DESIGN" },
+  {
+    title:
+      "14 UI Design Trends in 2024 That Will Dominate: Stay Ahead of the Game",
+    description:
+      "The landscape of user interface design is undoubtedly one of the most rapidly evolving industries. With each passing day, fresh ..",
+    image: blog1,
+    tag: "UI DESIGN",
+  },
+  {
+    title:
+      "11 Effective Interaction Design Principles for Seamless Digital Interactions",
+    description:
+      "What does the term 'interaction' truly mean to you? Isn't it about the communication and understanding shared between two individuals?..",
+    image: blog2,
+    tag: "DESIGN",
+  },
 ];
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -53,8 +67,8 @@ export default function Home() {
     };
   }, []);
   return (
-    <section className="space-y-10 pt-20 w-full">
-      <div className="relative container-fluid h-[623px] md:h-[523px] w-full bg-[url('../../public/images/hero-bg.png')] bg-cover bg-center flex flex-col justify-center gap-10 text-white rounded-3xl">
+    <section className="space-y-10 pt-20 w-full overflow-x-hidden">
+      <div className="relative container-fluid h-[623px] md:h-[523px] bg-[url('../../public/images/hero-bg.png')] bg-cover bg-center flex flex-col justify-center gap-10 text-white rounded-3xl">
         <h2 className="text-4xl lg:text-6xl text-center">
           Designing tomorrow’s digital <br /> interfaces today. powerful digital{" "}
           <br /> design agency
@@ -133,7 +147,7 @@ export default function Home() {
 
       {/* 1st blue Section */}
       <section className="container-fluid">
-        <div className="w-full flex flex-col justify-evenly p-10 text-white h-96 bg-gradient-to-r from-[#2256ff]/[1] via-[#7fa8f3]/[1] to-[#8ebff8]/[0.31] rounded-3xl">
+        <div className="flex flex-col justify-evenly p-10 text-white h-96 bg-gradient-to-r from-[#2256ff]/[1] via-[#7fa8f3]/[1] to-[#8ebff8]/[0.31] rounded-3xl">
           <p className=" text-5xl">
             Our studio is safe space <br /> where startups grow and shine.
           </p>
@@ -200,7 +214,7 @@ export default function Home() {
       </section>
 
       {/* Area of expertise */}
-      <section className="py-20">
+      <section className="container-fluid py-20">
         <div className="container-fluid">
           <div className="flex items-center gap-2">
             <svg
@@ -706,19 +720,15 @@ export default function Home() {
             with our agency.
           </p>
           <p className="text-2xl text-black">
-            So maybe you are the one we are {" "}
-            <span className="text-white">
-            searching for!
-            </span>
+            So maybe you are the one we are{" "}
+            <span className="text-white">searching for!</span>
           </p>
-          <div className="flex">
-
-          </div>
+          <div className="flex"></div>
         </div>
       </section>
 
       {/* Blogs */}
-      <section className="py-10">
+      <section className="container-fluid py-10">
         <div className="container-fluid">
           <div className="flex items-center gap-2">
             <svg
