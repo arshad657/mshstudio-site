@@ -3,8 +3,8 @@ import React from "react";
 
 function ClientFeedbackCard({ data }: any) {
   return (
-    <div className="border border-[#0000000A] p-16 rounded-[30px] bg-[#F9F9F9] hover:bg-pink-gradient hover:text-white h-[700px] flex flex-col justify-between cursor-pointer">
-      <div className="w-16 h-16 relative rounded-full overflow-hidden ml-auto">
+    <div className="border border-[#0000000A] p-5 md:p-16 rounded-[30px] space-y-16 md:space-y-0 bg-[#F9F9F9] hover:bg-pink-gradient hover:text-white md:h-[700px] flex flex-col justify-between cursor-pointer">
+      <div className="w-24 h-24 relative rounded-full overflow-hidden ml-auto">
         <Image
           src="https://www.adobe.com/content/dam/cc/us/en/creativecloud/video/discover/medium-close-up-shot/thumbnail.jpeg"
           alt="Avatar"
@@ -27,7 +27,7 @@ function ClientFeedbackCard({ data }: any) {
           />
         </svg>
 
-        <p className="text-[27px] w-[350px]">{data?.feedback}</p>
+        <p className="text-[24px] md:text-[27px] md:w-[350px]">{data?.feedback}</p>
       </div>
       <div>
         <p>{data?.userName}</p>

@@ -5,8 +5,8 @@ import { IoLogoWhatsapp } from "react-icons/io";
 function Header() {
   return (
     <section className="fixed z-50 w-full backdrop-blur-lg bg-white/80">
-      <div className="container-fluid ">
-        <div className="flex items-center justify-between h-20 px-20  ">
+      <div className="container-fluid">
+        <div className="flex items-center justify-between h-20 md:px-20  ">
           <div className="flex justify-between items-center gap-10">
             <div className="flex items-center gap-1">
               <svg
@@ -184,20 +184,24 @@ function Header() {
                 </defs>
               </svg>
             </div>
-            <div className="text-md flex gap-5">
-              <p>Home</p>
-              <p>Introduction</p>
-              <p>Showcase</p>
-              <p>Blog</p>
+            <div className="desktop-component">
+              <div className="text-md flex gap-5">
+                <p>Home</p>
+                <p>Introduction</p>
+                <p>Showcase</p>
+                <p>Blog</p>
+              </div>
             </div>
           </div>
           <div className="flex items-center justify-between gap-10">
-            <div className="flex items-center gap-5">
-              <FaTwitter size={25} />
-              <IoLogoWhatsapp size={25} />
-              <FaInstagram size={25} />
+            <div className="desktop-component">
+              <div className="flex items-center gap-5">
+                <FaTwitter size={25} />
+                <IoLogoWhatsapp size={25} />
+                <FaInstagram size={25} />
+              </div>
             </div>
-            <button className="bg-black flex items-center gap-3 rounded-full py-2.5 px-5 text-white">
+            <button className="bg-black flex items-center gap-1 md:gap-3 rounded-full px-3 py-2 md:py-2.5 md:px-5 text-white">
               <svg
                 width="24"
                 height="24"

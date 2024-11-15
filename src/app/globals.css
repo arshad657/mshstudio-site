@@ -34,7 +34,34 @@ body {
 }
 
 .container-fluid {
-  @apply max-w-[1190px] mx-10 lg:mx-auto lg:px-0 relative;
+  @apply max-w-[1190px] mx-5 lg:mx-auto lg:px-0 relative;
+}
+.desktop-component {
+  display: block;
+}
+@media (max-width: 1024px) {
+  .desktop-component {
+    display: none;
+  }
+}
+
+.mobile-component {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .mobile-component {
+    display: block;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* For Firefox */
 }
 
 @layer utilities {
