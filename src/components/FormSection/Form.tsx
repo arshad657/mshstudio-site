@@ -2,7 +2,7 @@ import React from "react";
 
 function Form() {
   return (
-    <section className="grid grid-cols-2 gap-16 w-[80%]">
+    <section className="grid grid-cols-2 gap-x-16 gap-y-[45px] w-[80%]">
       <div className="flex flex-col gap-2 h-fit">
         <label htmlFor="name" className="text-xl">
           Name & Company

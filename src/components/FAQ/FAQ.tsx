@@ -27,6 +27,12 @@ const faqData = [
     answer:
       "As a UI/UX agency, our core focus lies in understanding user needs through research, crafting intuitive designs with a strong emphasis on user interface and experience. We specialize in wireframing, prototyping, and collaboration with development teams to ensure seamless implementation, continually iterating based on user feedback for optimal digital experiences.",
   },
+  {
+    id: 5,
+    question: "What process should I expect from your UX agency?",
+    answer:
+      "As a UI/UX agency, our core focus lies in understanding user needs through research, crafting intuitive designs with a strong emphasis on user interface and experience. We specialize in wireframing, prototyping, and collaboration with development teams to ensure seamless implementation, continually iterating based on user feedback for optimal digital experiences.",
+  },
 ];
 
 function FAQ() {
@@ -41,7 +47,7 @@ function FAQ() {
   };
 
   return (
-    <section className="container-fluid">
+    <section className="container-fluid pt-10">
       {/* FAQ Title start*/}
       <div className="flex items-center gap-2">
         <svg

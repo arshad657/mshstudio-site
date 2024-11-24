@@ -1,17 +1,16 @@
 "use client";
 import Image from "next/image";
-import serviceGroup1 from "../../public/images/service-group-1.png";
-import serviceGroup2 from "../../public/images/service-group-2.png";
-import serviceGroupMobile1 from "../../public/images/service-group-mobile-1.png";
-import serviceGroupMobile2 from "../../public/images/service-group-mobile-2.png";
+import serviceGroup1 from "../../public/images/service-group/service-group-1.png";
+import serviceGroup2 from "../../public/images/service-group/service-group-2.png";
+import serviceGroupMobile1 from "../../public/images/service-group/service-group-mobile-1.png";
+import serviceGroupMobile2 from "../../public/images/service-group/service-group-mobile-2.png";
 import ShowcaseCard from "@/components/ShowcaseCard";
-import showcase1 from "../../public/images/showcase-1.png";
-import showcase2 from "../../public/images/showcase-2.png";
-import showcase3 from "../../public/images/showcase-3.png";
-import blog1 from "../../public/images/blog-1.png";
-import blog2 from "../../public/images/blog-2.png";
+import showcase1 from "../../public/images/showcase/showcase-1.png";
+import showcase2 from "../../public/images/showcase/showcase-2.png";
+import showcase3 from "../../public/images/showcase/showcase-3.png";
+import showcase4 from "../../public/images/showcase/showcase-4.png";
+import showcase5 from "../../public/images/showcase/showcase-5.png";
 import React, { useEffect, useRef } from "react";
-import Head from "next/head";
 import BlogCard from "@/components/BlogCard";
 import { BiPlus } from "react-icons/bi";
 import FAQ from "@/components/FAQ/FAQ";
@@ -24,25 +23,27 @@ const showCaseData = [
   { title: "United health SAAS - UIUX Design", image: showcase1 },
   { title: "Worx - Branding & UIUX Design", image: showcase2 },
   { title: "MyEco- Branding & UIUX Design", image: showcase3 },
+  { title: "Flyeasy - Branding & UIUX Design", image: showcase4 },
+  { title: "WOOW Cargo  Software Redesign", image: showcase5 },
 ];
-const blogData = [
-  {
-    title:
-      "14 UI Design Trends in 2024 That Will Dominate: Stay Ahead of the Game",
-    description:
-      "The landscape of user interface design is undoubtedly one of the most rapidly evolving industries. With each passing day, fresh ..",
-    image: blog1,
-    tag: "UI DESIGN",
-  },
-  {
-    title:
-      "11 Effective Interaction Design Principles for Seamless Digital Interactions",
-    description:
-      "What does the term 'interaction' truly mean to you? Isn't it about the communication and understanding shared between two individuals?..",
-    image: blog2,
-    tag: "DESIGN",
-  },
-];
+// const blogData = [
+//   {
+//     title:
+//       "14 UI Design Trends in 2024 That Will Dominate: Stay Ahead of the Game",
+//     description:
+//       "The landscape of user interface design is undoubtedly one of the most rapidly evolving industries. With each passing day, fresh ..",
+//     image: blog1,
+//     tag: "UI DESIGN",
+//   },
+//   {
+//     title:
+//       "11 Effective Interaction Design Principles for Seamless Digital Interactions",
+//     description:
+//       "What does the term 'interaction' truly mean to you? Isn't it about the communication and understanding shared between two individuals?..",
+//     image: blog2,
+//     tag: "DESIGN",
+//   },
+// ];
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -68,8 +69,9 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
-    <section className="space-y-10 pt-20 w-full overflow-x-scroll">
+    <section className="space-y-10 pt-20 w-full">
       <div className="relative container-fluid h-[623px] md:h-[523px] bg-[url('../../public/images/hero-bg.png')] bg-cover bg-center flex flex-col pt-10 md:pt-0 md:justify-center gap-5 text-white rounded-3xl">
         <h2 className="text-4xl lg:text-6xl text-center">
           Designing tomorrow’s digital <br /> interfaces today. powerful digital{" "}
@@ -1535,7 +1537,7 @@ export default function Home() {
       </section>
 
       {/* Blogs */}
-      <section className="container-fluid py-10">
+      {/* <section className="container-fluid py-10">
         <div className="flex items-center gap-2">
           <svg
             width="50"
@@ -1578,7 +1580,7 @@ export default function Home() {
             <BlogCard data={item} key={item.title} />
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ */}
       <FAQ />
@@ -1588,8 +1590,7 @@ export default function Home() {
 
       {/* Form */}
       <FormSection />
-      {/* Footer */}
-      <Footer />
+
     </section>
   );
 }

@@ -3,7 +3,7 @@ import Form from "./Form";
 
 function FormSection() {
   return (
-    <section className="container-fluid">
+    <section className="container-fluid py-16">
       {/* Form title start*/}
       <div className="flex items-center gap-2">
         <svg

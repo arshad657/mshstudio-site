@@ -16,7 +16,7 @@ function ShowcaseCard({ data }: { data: any }) {
       <div className="flex items-center justify-between">
         <div>
           <h3 className="text-[14px] md:text-[21px] font-medium">
-            United health SAAS - UIUX Design
+            {data.title}
           </h3>
           <div className="text-[9px] md:text-[14px] flex items-center gap-5 mt-2">
             <p>CASE STUDY</p>
