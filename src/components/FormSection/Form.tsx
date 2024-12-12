@@ -8,7 +8,7 @@ function Form() {
           Name & Company
         </label>
         <input
-          className="border-b outline-none py-2"
+          className="border-b outline-none py-2 bg-transparent"
           placeholder="John from Apple"
         />
       </div>
@@ -17,7 +17,7 @@ function Form() {
           Your Email
         </label>
         <input
-          className="border-b outline-none py-2"
+          className="border-b outline-none py-2 bg-transparent"
           placeholder="johnapple@gmail.com"
         />
       </div>
@@ -25,14 +25,14 @@ function Form() {
         <label htmlFor="name" className="text-xl">
           I’m interested in...
         </label>
-        <input className="border-b outline-none py-2" placeholder="Website Design" />
+        <input className="border-b outline-none py-2 bg-transparent" placeholder="Website Design" />
       </div>
       <div className="flex flex-col gap-2 h-fit">
         <label htmlFor="name" className="text-xl">
           Project budget (USD)
         </label>
         <input
-          className="border-b outline-none py-2"
+          className="border-b outline-none py-2 bg-transparent"
           placeholder="Enter your Price"
           type="number"
         />
@@ -42,7 +42,7 @@ function Form() {
           Tell us more about your project
         </label>
         <input
-          className="border-b outline-none py-2"
+          className="border-b outline-none py-2 bg-transparent"
           placeholder="Something about your great idea"
         />
       </div>

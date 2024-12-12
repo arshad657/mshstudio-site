@@ -1,12 +1,13 @@
 import Image from "next/image";
 import React from "react";
 
+
 function ClientFeedbackCard({ data }: any) {
   return (
-    <div className="border border-[#0000000A] p-5 md:p-16 rounded-[30px] space-y-16 md:space-y-0 bg-[#F9F9F9] hover:bg-pink-gradient hover:text-white md:h-[700px] flex flex-col justify-between cursor-pointer">
-      <div className="w-24 h-24 relative rounded-full overflow-hidden ml-auto">
+    <div className="border border-[#0000000A] p-5 md:p-10 rounded-[30px] space-y-5 md:space-y-0 bg-white md:h-[700px] flex flex-col justify-between cursor-pointer">
+      <div className="w-20 h-20 relative rounded-full overflow-hidden">
         <Image
-          src="https://www.adobe.com/content/dam/cc/us/en/creativecloud/video/discover/medium-close-up-shot/thumbnail.jpeg"
+          src={data?.img}
           alt="Avatar"
           layout="fill" // Fills the parent container
           objectFit="cover" // Ensures the image scales properly
@@ -27,7 +28,7 @@ function ClientFeedbackCard({ data }: any) {
           />
         </svg>
 
-        <p className="text-[24px] md:text-[27px] md:w-[350px]">{data?.feedback}</p>
+        <p className="text-[24px] md:text-[22px]">{data?.feedback}</p>
       </div>
       <div>
         <p>{data?.userName}</p>

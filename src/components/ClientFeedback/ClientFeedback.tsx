@@ -1,10 +1,15 @@
-"use client";
 import React, { useState } from "react";
 import ClientFeedbackCard from "./ClientFeedbackCard";
+import Shootouts from "../../app/images/shootouts.png";
+import Gigee from "../../app/images/gigee.png";
+import DLC from "../../app/images/DLC.png";
+import Woow from "../../app/images/Woow.png";
+import Luqcourtside from "../../app/images/luqcourtside.png";
 
 const data = [
   {
     id: 1,
+    img: Shootouts,
     userName: "Danny John",
     designation: "CEO on Shoots and reels",
     feedback:
@@ -12,20 +17,47 @@ const data = [
   },
   {
     id: 2,
+    img: Gigee,
     userName: "Brown",
-    designation: "CEO on Tiktok",
+    designation: "CEO On Gigee",
     feedback:
       "Exceptionally professional job. Surpassed my expectations. Communication was seamless and rapid.",
   },
   {
     id: 3,
-    userName: "Fill Salt",
-    designation: "CEO on Microsoft",
-    feedback: "Stunning design, and great adaptability.",
+    img: DLC,
+    userName: "Naveen",
+    designation: "CO Founder On DLC Corporation",
+    feedback:
+      "I really love the result. I am very happy with your work, if we continue like this, I will recommend you to all my colleagues, there is always work of this type to do.",
+  },
+  {
+    id: 4,
+    img: Woow,
+    userName: "Lucas",
+    designation: "Founder On Woow",
+    feedback:
+      "Great designer and extremely responsive. Makes an effort to make things better and understand the problem statement.",
+  },
+  {
+    id: 5,
+    img: Luqcourtside,
+    userName: "Luqman",
+    designation: "Founder On  luqcourtside",
+    feedback:
+      "I am beyond impressed with the outstanding work. He exceeded all expectations and delivered a visually stunning design. Throughout the project, he was dedicated, responsive.",
   },
 ];
+
 function ClientFeedback() {
   const [index, setIndex] = useState(0);
+
+  // Show 3 items in sequence
+  const displayedData = [
+    data[index],
+    data[(index + 1) % data.length],
+    data[(index + 2) % data.length],
+  ];
 
   const handleNext = () => {
     setIndex((prevIndex) => (prevIndex + 1) % data.length);
@@ -35,53 +67,46 @@ function ClientFeedback() {
     setIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
   };
 
-  const displayedData = [data[index], data[(index + 1) % data.length]];
   return (
     <section>
       <div className="container-fluid">
-      <div className="flex items-center gap-2">
-        <svg
-          width="50"
-          height="50"
-          viewBox="0 0 66 66"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g clip-path="url(#clip0_24_2303)">
-            <mask
-              id="mask0_24_2303"
-              // style="mask-type:luminance"
-              maskUnits="userSpaceOnUse"
-              x="0"
-              y="0"
-              width="66"
-              height="66"
+        <div className="md:flex items-center justify-between mb-5 md:mb-10">
+          <div className="flex items-center gap-2">
+            <svg
+              width="50"
+              height="50"
+              viewBox="0 0 66 66"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M66 0H0V66H66V0Z" fill="white" />
-            </mask>
-            <g mask="url(#mask0_24_2303)">
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M1.44248e-06 9.12585e-07L2.48827e-06 16.5L33 33L7.21238e-07 49.5L0 66L33 49.5V66L66 49.5V33V16.5L33 0V16.5L1.44248e-06 9.12585e-07ZM33 16.5V33V49.5L66 33L33 16.5Z"
-                fill="#E9B8FF"
-              />
-            </g>
-          </g>
-          <defs>
-            <clipPath id="clip0_24_2303">
-              <rect width="66" height="66" fill="white" />
-            </clipPath>
-          </defs>
-        </svg>
-        <p className="text-3xl md:text-5xl font-light">
-          What Client Says
-        </p>
-        </div>
-        <div className="md:flex items-center justify-between mb-5 md:mb-0">
-          <p className="font-[22px] my-10">
-            Cultivating Trust Through <br /> Each Testimonial Shared.
-          </p>
+              <g clipPath="url(#clip0_24_2303)">
+                <mask
+                  id="mask0_24_2303"
+                  maskUnits="userSpaceOnUse"
+                  x="0"
+                  y="0"
+                  width="66"
+                  height="66"
+                >
+                  <path d="M66 0H0V66H66V0Z" fill="white" />
+                </mask>
+                <g mask="url(#mask0_24_2303)">
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M1.44248e-06 9.12585e-07L2.48827e-06 16.5L33 33L7.21238e-07 49.5L0 66L33 49.5V66L66 49.5V33V16.5L33 0V16.5L1.44248e-06 9.12585e-07ZM33 16.5V33V49.5L66 33L33 16.5Z"
+                    fill="#E9B8FF"
+                  />
+                </g>
+              </g>
+              <defs>
+                <clipPath id="clip0_24_2303">
+                  <rect width="66" height="66" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <p className="text-3xl md:text-5xl font-light">What Client Says</p>
+          </div>
           <div className="desktop-component">
             <div className="flex items-center gap-5">
               <svg
@@ -115,40 +140,10 @@ function ClientFeedback() {
             </div>
           </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
-            {displayedData.map((item) => (
-              <ClientFeedbackCard data={item} />
-              //   <div
-              //     key={item.id}
-              //     style={{
-              //       border: "1px solid black",
-              //       padding: "20px",
-              //       borderRadius: "5px",
-              //       minWidth: "200px",
-              //       textAlign: "center",
-              //     }}
-              //   >
-              //     <p>
-              //       <strong>{item.userName}</strong>
-              //     </p>
-              //     <p>{item.designation}</p>
-              //     <p>"{item.feedback}"</p>
-              //   </div>
-            ))}
-          </div>
-          {/* <div style={{ marginTop: "20px" }}>
-              <button onClick={handlePrev} style={{ marginRight: "10px" }}>
-                Previous
-              </button>
-              <button onClick={handleNext}>Next</button>
-            </div> */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {displayedData.map((item) => (
+            <ClientFeedbackCard key={item.id} data={item} />
+          ))}
         </div>
       </div>
     </section>

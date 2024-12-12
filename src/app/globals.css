@@ -32,6 +32,19 @@ body {
   background: var(--background);
   font-family: "Helvetica Now Display";
 }
+
+.showcase-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.showcase-item {
+  transition: transform 0.5s ease;
+}
+
+.showcase-container .showcase-item {
+  transition: transform 0.5s ease;
+}
 .custom-cursor {
   cursor: url('/icons/custom-cursor.svg'), auto; /* Use SVG as cursor */
 }

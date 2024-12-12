@@ -1,5 +1,6 @@
 import React from "react";
-import { FaInstagram, FaInstagramSquare, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaInstagramSquare, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
 
 function Header() {
@@ -189,16 +190,39 @@ function Header() {
                 <p>Home</p>
                 <p>Introduction</p>
                 <p>Showcase</p>
-                <p>Blog</p>
+                <p>FAQ</p>
               </div>
             </div>
           </div>
           <div className="flex items-center justify-between gap-10">
             <div className="desktop-component">
               <div className="flex items-center gap-5">
-                <FaTwitter size={25} />
-                <IoLogoWhatsapp size={25} />
-                <FaInstagram size={25} />
+                
+                
+                <a
+                  target="_blank"
+                  href="https://x.com/msh_studio1"
+                >
+                  <FaXTwitter size={25} />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/company/mshstudio"
+                >
+                  <FaLinkedin size={25} />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://wa.me/message/XKIOSQOUUUPIN1"
+                >
+                  <IoLogoWhatsapp size={25} />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/msh.studio22/"
+                >
+                  <FaInstagram size={25} />
+                </a>
               </div>
             </div>
             <button className="bg-black flex items-center gap-1 md:gap-3 rounded-full px-3 py-2 md:py-2.5 md:px-5 text-white">
